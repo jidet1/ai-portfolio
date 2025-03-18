@@ -7,42 +7,69 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #121212;
+            background-color: #0d0d0d;
             color: #ffffff;
             text-align: center;
             padding: 20px;
+            overflow: hidden;
         }
         .container {
-            max-width: 800px;
+            max-width: 600px;
             margin: auto;
-            padding: 20px;
-            background-color: #1e1e1e;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            background: linear-gradient(135deg, #1f1f1f, #292929);
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 255, 204, 0.3);
+            position: relative;
+            overflow: hidden;
         }
         h1 {
             color: #00ffcc;
+            font-size: 32px;
+        }
+        p {
+            font-size: 18px;
+        }
+        .contact-info {
+            margin-top: 20px;
         }
         a {
             color: #00ffcc;
             text-decoration: none;
+            font-weight: bold;
         }
         a:hover {
             text-decoration: underline;
         }
+        .animated-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle, rgba(0,255,204,0.2) 10%, transparent 70%);
+            animation: pulse 3s infinite alternate;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.7; }
+            100% { transform: scale(1.1); opacity: 0.5; }
+        }
     </style>
 </head>
 <body>
+    <div class="animated-bg"></div>
     <div class="container">
         <h1>Joshua Agbeluyi</h1>
         <p>Aspiring AI Developer | Python Enthusiast</p>
         <p>Passionate about AI, cybersecurity, and coding.</p>
-        <h2>Contact</h2>
-        <p>
-            <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">LinkedIn</a> |
-            <a href="https://github.com/YOUR-GITHUB" target="_blank">GitHub</a> |
-            <a href="mailto:joshuaagbeluyi20@gmail.com">Email</a>
-        </p>
+        
+        <div class="contact-info">
+            <h2>Contact</h2>
+            <p>📞 +234 814 309 9214</p>
+            <p>📧 <a href="mailto:joshuaagbeluyi20@gmail.com">joshuaagbeluyi20@gmail.com</a></p>
+            <p>🔗 <a href="https://www.linkedin.com/in/joshua-agbeluyi-32258432a" target="_blank">LinkedIn Profile</a></p>
+        </div>
     </div>
 </body>
 </html>
